@@ -1,13 +1,29 @@
-import { Box } from '@chakra-ui/react'
-import './App.css'
+import React from "react";
 
-function App() {
+import Carousel from "./Carousel";
+import CarouselItem from "./CarouselItem";
+import { IData } from "./data.interface";
+import { data } from "./data";
+
+const App: React.FC = () => {
+  const [currentIndex, setCurrentIndex] = React.useState<number>(0);
+  const [visibleItems] = React.useState<number>(1);
 
   return (
-    <Box>
-      Hello world
-    </Box>
-  )
-}
+    <Carousel
+      items={data}
+      currentIndex={currentIndex}
+      setCurrentIndex={setCurrentIndex}
+      visibleItems={visibleItems}
+      animationDuration={500}
+    >
+      {data?.map((item: IData) => (
+        <CarouselItem key={item.id} item={item} visibleItems={visibleItems}>
+          {item.content}
+        </CarouselItem>
+      ))}
+    </Carousel>
+  );
+};
 
-export default App
+export default App;
