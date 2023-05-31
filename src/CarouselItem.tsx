@@ -1,17 +1,10 @@
 import { Box } from "@chakra-ui/react";
-import { IData } from "./data.interface";
-
-interface ICarouselItem {
-  children: React.ReactNode;
-  item: IData;
-  visibleItems: number;
-}
 
 const CarouselItem = ({
   children,
   item,
   visibleItems,
-}: ICarouselItem) => {
+}: any) => {
   return (
     <Box
       key={item.id}

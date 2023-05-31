@@ -1,6 +1,4 @@
-import { IData } from "./data.interface";
-
-export const data: IData[] = [
+export const data: any[] = [
   {
     id: 1,
     content: <>hello</>,

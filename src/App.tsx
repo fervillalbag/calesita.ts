@@ -2,7 +2,6 @@ import React from "react";
 
 import Carousel from "./Carousel";
 import CarouselItem from "./CarouselItem";
-import { IData } from "./data.interface";
 import { data } from "./data";
 
 const App: React.FC = () => {
@@ -17,7 +16,7 @@ const App: React.FC = () => {
       visibleItems={visibleItems}
       animationDuration={500}
     >
-      {data?.map((item: IData) => (
+      {data?.map((item) => (
         <CarouselItem key={item.id} item={item} visibleItems={visibleItems}>
           {item.content}
         </CarouselItem>

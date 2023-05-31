@@ -1,14 +1,4 @@
 import { Box, Button } from "@chakra-ui/react";
-import { IData } from "./data.interface";
-
-interface ICarousel {
-  animationDuration: number;
-  items: IData[];
-  currentIndex: number;
-  setCurrentIndex: (value: any) => void;
-  visibleItems: number;
-  children: React.ReactNode;
-}
 
 const Carousel = ({
   animationDuration,
@@ -17,7 +7,7 @@ const Carousel = ({
   visibleItems,
   setCurrentIndex,
   children,
-}: ICarousel) => {
+}: any) => {
   const nextSlide = () => {
     setCurrentIndex(
       (prevIndex: any) => (prevIndex + 1) % items.length
