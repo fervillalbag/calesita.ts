@@ -4,7 +4,7 @@ const CarouselItem = ({
   children,
   item,
   visibleItems,
-}: any) => {
+}) => {
   return (
     <Box
       key={item.id}

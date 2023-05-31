@@ -7,16 +7,16 @@ const Carousel = ({
   visibleItems,
   setCurrentIndex,
   children,
-}: any) => {
+}) => {
   const nextSlide = () => {
     setCurrentIndex(
-      (prevIndex: any) => (prevIndex + 1) % items.length
+      (prevIndex) => (prevIndex + 1) % items.length
     );
   };
 
   const prevSlide = () => {
     setCurrentIndex(
-      (prevIndex: any) =>
+      (prevIndex) =>
         (prevIndex - 1 + items.length) % items.length
     );
   };
